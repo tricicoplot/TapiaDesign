@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.form-contacto {
+    background-color: var(--color-blanco);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-contacto h2 {
+    color: var(--color-primario);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--color-secundario);
+}
+
+/* Clases para el manejo de feedback visual (Criterio E7) */
+.error-msg {
+    color: var(--color-error);
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fce4d6;
+    border-left: 4px solid var(--color-error);
+    font-weight: bold;
+}
+
+.success-msg {
+    color: var(--color-exito);
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border-left: 4px solid var(--color-exito);
+    font-weight: bold;
+}
