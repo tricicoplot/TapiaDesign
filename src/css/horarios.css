@@ -1,0 +1,45 @@
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 30px;
+}
+
+.horarios-box {
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.horarios-box p {
+    margin-bottom: 25px;
+    color: var(--color-texto);
+    font-size: 1.1rem;
+}
+
+.lista-horarios {
+    list-style: none;
+    padding: 0;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.lista-horarios li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-horarios li:last-child {
+    border-bottom: none;
+    color: var(--color-error);
+}
