@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/contacto.css">
 </head>
-<body>
+<body style="margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; background-color: #f4f6f9;">
 
     <header class="main-header">
         <div class="logo">TapiaDesign</div>
@@ -21,7 +21,7 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main style="flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; padding: 40px 0;">
         <form id="contactForm" class="form-contacto" novalidate>
             <h2>Agendar Asesoría Técnica</h2>
             
@@ -46,6 +46,10 @@
             <div id="successFeedback" class="success-msg" role="status" hidden>¡Solicitud enviada con éxito! Nos contactaremos a la brevedad.</div>
         </form>
     </main>
+
+    <footer style="background-color: #1a252f; color: #ffffff; text-align: center; padding: 25px 0; font-size: 0.9rem; width: 100%; font-family: 'Segoe UI', Arial, sans-serif;">
+        <p>&copy; 2026 TapiaDesign. Todos los derechos reservados.</p>
+    </footer>
 
     <script src="../js/form.js"></script>
 </body>

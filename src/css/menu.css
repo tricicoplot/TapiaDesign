@@ -1,39 +1,35 @@
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 50px auto;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-h2 {
+.container h2 {
     text-align: center;
-    margin-bottom: 40px;
     color: var(--color-primario);
-    font-size: 2.2rem;
+    margin-bottom: 40px;
 }
 
-/* Aplicación estricta de CSS Grid de 3 columnas (Criterio E5) */
-.portfolio-grid {
+/* El Grid bidimensional exigido por la pauta */
+.grid-catalogo {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-.portfolio-item {
+.card-servicio {
     background-color: var(--color-blanco);
     padding: 30px;
     border-radius: 8px;
-    border-top: 5px solid var(--color-secundario);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
 }
 
-.portfolio-item h3 {
-    color: var(--color-primario);
+.card-servicio:hover {
+    transform: translateY(-5px);
+}
+
+.card-servicio h3 {
+    color: var(--color-secundario);
     margin-bottom: 15px;
-}
-
-/* Diseño Adaptativo / Responsive para teléfonos celulares (Criterio E6) */
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* El grid se estira a 1 sola columna vertical en móviles */
-    }
 }

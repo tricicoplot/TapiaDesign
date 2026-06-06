@@ -1,56 +1,56 @@
 :root {
-    --color-primario: #1a252f;      /* Azul oscuro de alta legibilidad */
-    --color-secundario: #d35400;    /* Naranja técnico para acentos */
-    --color-fondo: #f8f9fa;
-    --color-blanco: #ffffff;
-    --color-texto: #2c3e50;
-    --color-error: #c0392b;
-    --color-exito: #27ae60;
-    --fuente-base: 'Arial', sans-serif;
+  --color-primario: #2c3e50;
+  --color-secundario: #d35400;
+  --color-texto: #333333;
+  --color-blanco: #ffffff;
+  --color-fondo: #f4f6f9;
+  --color-error: #c0392b;
+  --color-exito: #27ae60;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: var(--fuente-base);
-    font-size: 16px;
-    color: var(--color-texto);
-    background-color: var(--color-fondo);
-    line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
 }
 
-/* Estructura común para el menú de navegación */
 .main-header {
-    background-color: var(--color-primario);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
+  background-color: #1a252f;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .main-header .logo {
-    color: var(--color-blanco);
-    font-size: 1.5rem;
-    font-weight: bold;
+  color: var(--color-blanco);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .main-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 .main-nav a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .main-nav a:hover {
-    color: var(--color-secundario);
+  color: var(--color-secundario);
 }
