@@ -1,100 +1,12 @@
 /* ==========================================
-   1. CONFIGURACIÓN BASE (PORTADA / GLOBAL)
-   ========================================== */
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #1a252f; /* Fondo oscuro predeterminado */
-    color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-main {
-    flex: 1;
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #111a22;
-    --accent-color: #d35400;
-    --white: #ffffff;
-}
-
-/* ==========================================
-   2. CABECERA GLOBAL (ESTRICTA SIN CORTES)
-   ========================================== */
-.main-header {
-    background-color: var(--primary-color);
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    width: 100%;
-    box-sizing: border-box;
-    height: 80px; 
-    flex-shrink: 0;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 200px; 
-    flex-shrink: 0;
-}
-
-.nav-logo {
-    height: 40px !important;
-    width: auto !important;
-    display: block;
-    object-fit: contain;
-}
-
-.main-nav {
-    display: flex;
-    align-items: center;
-}
-
-.main-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 24px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 500;
-    font-size: 1rem;
-    opacity: 0.8;
-    transition: opacity 0.2s ease, color 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    opacity: 1;
-    color: var(--accent-color);
-}
-
-/* ==========================================
    3. HERO SECCIÓN DE PORTADA
    ========================================== */
 .hero-section {
     text-align: center;
     padding: 60px 20px 20px 20px;
     max-width: 800px;
-    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,8 +28,8 @@ main {
 
 .hero-btn {
     display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--white);
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
     text-decoration: none;
     padding: 12px 30px;
     font-weight: 600;
@@ -139,7 +51,6 @@ main {
     max-width: 600px; 
     margin: 0 auto;
     padding: 40px 10px;
-    box-sizing: border-box;
 }
 
 .td-carousel-title {
@@ -147,7 +58,7 @@ main {
     margin-top: 0;
     margin-bottom: 25px;
     font-size: 2rem;
-    color: var(--white);
+    color: var(--color-blanco);
 }
 
 .td-carousel-wrapper {
@@ -164,18 +75,16 @@ main {
     gap: 0px !important; 
     overflow-x: hidden !important; 
     width: 100%;
-    box-sizing: border-box;
 }
 
 .td-carousel-card {
     flex: 0 0 100% !important;
     width: 100% !important;
-    background-color: var(--primary-color);
+    background-color: var(--color-primario);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    box-sizing: border-box;
 }
 
 .td-carousel-img {
@@ -189,23 +98,23 @@ main {
 .td-card-info {
     padding: 20px;
     text-align: center;
-    background-color: var(--primary-color);
+    background-color: var(--color-primario);
 }
 
 .td-card-info h3 {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--color-blanco);
 }
 
 .td-carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--accent-color);
+    background-color: var(--color-secundario);
     border: none;
-    color: var(--white);
+    color: var(--color-blanco);
     font-size: 20px;
     width: 44px;
     height: 44px;
@@ -220,158 +129,3 @@ main {
 
 .td-carousel-btn.prev { left: -22px; }
 .td-carousel-btn.next { right: -22px; }
-
-/* ==========================================
-   5. CONTROL DE FONDO CLARO PARA PÁGINA SERVICIOS
-   ========================================== */
-body.light-bg-page {
-    background-color: #f4f6f8 !important;
-    color: #333333 !important;
-}
-
-.menu-main-container {
-    flex: 1;
-    padding: 40px 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.services-intro-section {
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 40px;
-}
-
-.services-main-title {
-    text-align: center;
-    font-size: 2.4rem;
-    color: #111a22 !important;
-    margin-bottom: 40px;
-}
-
-/* ==========================================
-   6. RECUADROS ORIGINALES (CATÁLOGO SERVICIOS)
-   ========================================== */
-.custom-services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.custom-service-card {
-    background-color: #ffffff !important; 
-    border-radius: 12px;
-    padding: 35px 25px;
-    box-sizing: border-box;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    text-align: left;
-}
-
-.custom-service-card h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #d35400 !important; 
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-.custom-service-card p {
-    margin: 0;
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #555555 !important;
-}
-
-/* ==========================================
-   7. TABLA DE TARIFAS (SERVICIOS)
-   ========================================== */
-.ts-pricing-section {
-    width: 100%;
-    max-width: 900px;
-    margin: 20px auto 40px auto;
-    box-sizing: border-box;
-}
-
-.ts-pricing-title {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #111a22 !important;
-}
-
-.ts-table-wrapper {
-    width: 100%;
-    overflow-x: auto; 
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-    border-radius: 10px;
-    background-color: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.ts-pricing-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    color: #333333 !important;
-    background-color: #ffffff !important;
-}
-
-.ts-pricing-table th, 
-.ts-pricing-table td {
-    padding: 1.2rem;
-    border-bottom: 1px solid #eeeeee !important;
-}
-
-.ts-pricing-table th {
-    background-color: #111a22 !important; 
-    color: #ffffff !important;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.8px;
-}
-
-.ts-pricing-table tbody tr:hover {
-    background-color: #f9fbfd !important;
-}
-
-/* ==========================================
-   8. PIE DE PÁGINA GLOBAL (FOOTER)
-   ========================================== */
-footer {
-    background-color: #111a22;
-    text-align: center;
-    padding: 25px 0;
-    font-size: 0.9rem;
-    color: #ffffff !important;
-    margin-top: auto;
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* ==========================================
-   9. MEDIA QUERIES RESPONSIVAS
-   ========================================== */
-@media (max-width: 768px) {
-    .main-header { padding: 0 20px; height: 70px; }
-    .logo-container { width: 150px; }
-    .nav-logo { height: 35px !important; }
-    .main-nav ul { gap: 15px; }
-    .hero-section h1 { font-size: 2.2rem; }
-    .services-main-title { font-size: 1.8rem; }
-    .ts-pricing-title { font-size: 1.6rem; }
-    .ts-pricing-table th, .ts-pricing-table td { padding: 0.9rem; font-size: 0.9rem; }
-    .td-carousel-btn.prev { left: 5px; }
-    .td-carousel-btn.next { right: 5px; }
-}
-
-@media (max-width: 480px) {
-    .main-header { flex-direction: column; gap: 8px; height: auto; padding: 15px 10px; }
-    .logo-container { width: auto; justify-content: center; }
-}

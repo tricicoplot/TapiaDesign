@@ -1,43 +1,63 @@
+/* ==========================================
+   ESTILOS ESPECÍFICOS: PÁGINA DE CONTACTO
+   ========================================== */
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    padding: 20px;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Forzar que la tarjeta sea blanca con texto oscuro sobre el fondo general */
 .form-contacto {
-    background-color: var(--color-blanco);
+    background-color: var(--color-blanco) !important; /* Mantiene la tarjeta blanca */
     padding: 40px;
     width: 100%;
     max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
+/* Título interno de la tarjeta */
 .form-contacto h2 {
-    color: var(--color-primario);
+    color: var(--color-primario) !important; /* Azul oscuro corporativo */
     margin-bottom: 25px;
     text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
 .form-group {
     margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
 }
 
+/* Forzar que las etiquetas se lean en gris oscuro */
 .form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: var(--color-texto);
+    color: #333333 !important; /* Texto oscuro visible sobre fondo blanco */
 }
 
-.form-group input, .form-group textarea {
-    width: 100%;
+/* Configuración adaptativa de los campos de entrada */
+.form-group input, 
+.form-group textarea {
+    width: 100% !important;
+    max-width: 100% !important;
     padding: 12px;
     border: 1px solid #bdc3c7;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1rem;
+    color: #333333 !important; /* Texto que escribe el usuario en oscuro */
+    background-color: #ffffff !important;
+    box-sizing: border-box !important;
 }
 
 .form-group textarea {
@@ -45,38 +65,33 @@
     resize: vertical;
 }
 
+/* Botón de envío */
 .btn-submit {
-    width: 100%;
+    width: 100% !important;
     background-color: var(--color-primario);
-    color: var(--color-blanco);
+    color: var(--color-blanco) !important;
     border: none;
     padding: 14px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 4px;
-    transition: background 0.3s ease;
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
 }
 
 .btn-submit:hover {
     background-color: var(--color-secundario);
 }
 
-/* Clases para el manejo de feedback visual (Criterio E7) */
-.error-msg {
-    color: var(--color-error);
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #fce4d6;
-    border-left: 4px solid var(--color-error);
-    font-weight: bold;
-}
-
-.success-msg {
-    color: var(--color-exito);
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #e8f5e9;
-    border-left: 4px solid var(--color-exito);
-    font-weight: bold;
+/* ==========================================
+   OPTIMIZACIÓN PARA DISPOSITIVOS MÓVILES
+   ========================================== */
+@media (max-width: 480px) {
+    .form-contacto {
+        padding: 25px 15px !important; /* Achica los márgenes para que no se corte en el celular */
+    }
+    .form-contacto h2 {
+        font-size: 1.5rem !important;
+    }
 }

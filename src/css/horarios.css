@@ -1,45 +1,104 @@
+/* ==========================================
+   ESTILOS ESPECÍFICOS: PÁGINA DE HORARIOS
+   ========================================== */
+
+/* Contenedor adaptativo de Horarios */
+.horarios-main-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
 .container {
-    width: 90%;
-    max-width: 800px;
-    margin: 50px auto;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-h2 {
+/* Título principal en la zona oscura */
+.horarios-title,
+.container h2 {
     text-align: center;
-    color: var(--color-primario);
-    margin-bottom: 30px;
+    color: var(--color-blanco) !important; /* Fuerza el blanco sobre el fondo oscuro general */
+    margin-bottom: 35px;
+    font-size: 2.4rem;
+    font-weight: 700;
 }
 
+/* Tarjeta contenedora blanca */
 .horarios-box {
-    background-color: var(--color-blanco);
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: var(--color-blanco) !important; /* Caja blanca obligatoria */
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Párrafo de introducción dentro de la caja blanca */
 .horarios-box p {
-    margin-bottom: 25px;
-    color: var(--color-texto);
-    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #2c3e50 !important; /* Forzar gris oscuro nítido */
+    font-size: 1.15rem;
+    line-height: 1.6;
 }
 
+/* Lista de bloques de horarios */
 .lista-horarios {
     list-style: none;
     padding: 0;
-    max-width: 450px;
+    max-width: 500px;
+    width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
+/* REGRA CRÍTICA: Fuerza el color oscuro a todo elemento y texto suelto dentro del li */
 .lista-horarios li {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+    padding: 18px 0;
+    border-bottom: 1px solid #eef2f5 !important;
     font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: #333333 !important; /* PINTA EL TEXTO SUELTO EN GRIS OSCURO LEGIBLE */
 }
 
+/* Fuerza el color oscuro también a las etiquetas strong de los días */
+.lista-horarios li strong {
+    color: #111a22 !important; /* Azul oscuro corporativo para los días lunes a sábado */
+    font-weight: 700;
+}
+
+/* Tratamiento especial para la última fila (Domingos) */
 .lista-horarios li:last-child {
     border-bottom: none;
-    color: var(--color-error);
+    color: var(--color-error) !important; /* Forzar el texto "Cerrado" a color rojo */
+}
+
+.lista-horarios li:last-child strong {
+    color: var(--color-error) !important; /* Forzar el día "Domingos y Festivos" a color rojo */
+}
+
+/* ==========================================
+   MEDIA QUERIES - OPTIMIZACIÓN MÓVIL
+   ========================================== */
+@media (max-width: 480px) {
+    .container h2, 
+    .horarios-title {
+        font-size: 1.8rem !important;
+    }
+    .horarios-box {
+        padding: 25px 15px !important;
+    }
+    .lista-horarios li {
+        flex-direction: column !important; /* Se apila en vertical en pantallas chicas */
+        gap: 5px !important;
+        text-align: center;
+        padding: 12px 0;
+    }
 }

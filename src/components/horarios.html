@@ -8,37 +8,38 @@
     <link rel="stylesheet" href="../css/horarios.css">
     <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 </head>
-<body style="margin: 0; padding: 0; display: flex; flex-direction: column; min-height: 100vh; background-color: #f4f6f9;">
+<body>
 
     <header class="main-header">
-        <a href="../../index.html" style="display: flex; align-items: center;">
-            <img src="../assets/logo.svg" alt="TapiaDesign Logo" style="height: 40px; width: auto;">
+        <a href="../../index.html">
+            <img src="../assets/logo.svg" alt="TapiaDesign Logo">
         </a>
         <nav class="main-nav">
             <ul>
                 <li><a href="../../index.html">Inicio</a></li>
                 <li><a href="menu.html">Servicios</a></li>
-                <li><a href="horarios.html">Horarios</a></li>
+                <li><a href="horarios.html" class="active">Horarios</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main style="flex: 1; display: flex; align-items: center; justify-content: center; width: 100%;">
-        <div class="container" style="margin: 0 auto;">
-            <h2 style="text-align: center; color: #1a252f; margin-bottom: 20px;">Horarios de Consulta y Visitas</h2>
+    <main class="horarios-main-container">
+        <div class="container">
+            <h1 class="horarios-title">Horarios de Consulta y Visitas</h1>
+            
             <section class="horarios-box">
-                <p>Planifica tu asesoría técnica en terreno con nuestro equipo de diseñadores en Santiago.</p>
+                <p class="horarios-intro">Planifica tu asesoría técnica en terreno con nuestro equipo de diseñadores en Santiago.</p>
                 <ul class="lista-horarios">
-                    <li><strong>Lunes a Viernes:</strong> 09:00 a.m. - 18:00 p.m.</li>
-                    <li><strong>Sábados:</strong> 10:00 a.m. - 14:00 p.m. (Bloque exclusivo agendado)</li>
-                    <li><strong>Domingos y Festivos:</strong> Cerrado</li>
+                    <li><span><strong>Lunes a Viernes:</strong></span> <span>09:00 a.m. - 18:00 p.m.</span></li>
+                    <li><span><strong>Sábados:</strong></span> <span>10:00 a.m. - 14:00 p.m. <small>(Bloque exclusivo)</small></span></li>
+                    <li class="domingo-cerrado"><span><strong>Domingos y Festivos:</strong></span> <span>Cerrado</span></li>
                 </ul>
             </section>
         </div>
     </main>
 
-    <footer style="background-color: #1a252f; color: #ffffff; text-align: center; padding: 25px 0; font-size: 0.9rem; width: 100%; font-family: 'Segoe UI', Arial, sans-serif;">
+    <footer style="background-color: #111a22; text-align: center; padding: 25px 0; font-size: 0.9rem; color: #ffffff; width: 100%; border-top: 1px solid rgba(255, 255, 255, 0.1); font-family: 'Segoe UI', sans-serif;">
         <p>&copy; 2026 TapiaDesign. Todos los derechos reservados.</p>
     </footer>
 
